@@ -1,0 +1,178 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="personal.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="jquery/css/smoothness/jquery-ui-1.8.2.custom.css" /> 
+    <script type="text/javascript" src="jquery/js/jquery-1.11.2.min.js"></script> 
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.8.2.custom.min.js"></script> 
+
+    
+
+		
+    <script>
+        function goToByScroll(id){
+          // Reove "link" from the ID
+        id = id.replace("link", "");
+          // Scroll
+        $('html,body').animate({
+            scrollTop: $("#"+id).offset().top},
+            'slow');
+    }
+
+    $("#sidebar > ul > li > a").click(function(e) { 
+      alert("Iron Man");
+          // Prevent a page reload when a link is pressed
+        e.preventDefault(); 
+          // Call the scroll function
+        goToByScroll($(this).attr("id"));           
+    });
+    </script>
+	</head>
+	
+	<title>Anthony Lowhur</title>
+	
+	<body>
+	
+		<div class="site-wrapper" id="wrapper">
+
+      <div class="site-wrapper-inner" id="inner-wrapper">
+
+        <div class="cover-container" id="cover">
+
+          <div class="masthead clearfix" id="mast">
+            <div class="inner" id="inner">
+
+              <h3 class="masthead-brand">Anthony Lowhur</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a id ="projectlink" href="#">Projects</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="inner cover">
+            <div class="roundedImage">&nbsp;</div>
+            <h1 class="cover-heading">Anthony Lowhur</h1>
+            <p class="lead">Programmer, Hacker, Entrepreneur</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+          <br>
+
+          <div id="sidebar">
+            <ul>
+                <li><a id = "projectlink" href="#">Projects</a></li>
+            </ul>
+        </div>          
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Feel free to say hi at antlowhur@yahoo.com</p>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+
+    </div>
+
+    <div id="project" style="background-color#848484;">
+            <br><br>
+            <h1>Personal Projects</h1>
+            <font size="5">Artificial Intellegence</font>
+            <br><br>
+            Rutgers Navigation System
+            <br><br>
+            <center>
+              <div style="width:70%">
+                Uses the A* algorithm in order to find the shortest path from point A to point B within Rutgers campus (to find buildings, bus stops, dining halls, etc) (currently Busch campus) as well as kinematics equations to find the time of the walk. Calcuates both the path and information of bus route and walking route to help one determine the more efficient way of getting to a destination (takes into account the bus route, average walking and bus driving speed, and distance between each places)
+                <br><br>
+                <a href="https://www.youtube.com/watch?v=Pt3fnORMzA8" target="_blank" style="color: #2E9AFE">Watch a video</a>
+
+              </div>
+            </center>
+            <br><br>
+            <font size="5">Human-Computer Interaction</font>
+            <br><br>
+            Kinect Helper
+            <br><br>
+            <center>
+              <div style="width:70%">
+                Used the Kinect to create a workspace that is able to sense the presence of its owner. By using object detection, the
+                Kinect is able to call a bash script that gives the Kinect control of the computer based on user input, creating a smart workspace. In this case the Kinect can sense when you get up from your chair and will automatically shut off the screen, this saves power and is more convenient than having to do it manually. We also included other features such as the ability to change the brightness of the screen using a hand held up to the sensor. Any other features can be added to the program and controlled with a hand held up to the Kinect.
+                <br><br>
+                <a href="http://challengepost.com/software/kinect-helper" target="_blank"  style="color: #2E9AFE">See More</a>
+              </div>
+            </center>
+
+            <br><br>
+            Leaptop
+            <br><br>
+            <center>
+              <div style="width:70%">
+                Used the Leap Motion in order to control some computer functions using just hand gestures. This includes opening up a browser, closing a browser, putting the laptop to sleep, and locking it using hand movements. This was made in Python which was also controlling a bash script.
+                <br><br>
+                <a href="https://www.youtube.com/watch?v=SqsctnDnpdc" target="_blank"  style="color: #2E9AFE">See Demo</a>
+              </div>
+            </center>
+            <br><br>
+            <font size="5">Web Development</font>
+            <br><br>
+            WannaStudy
+            <br><br>
+            <center>
+              <div style="width:70%">
+                A social networking forum designed to help create academic community and supports the circulation of academic information within colleges in order for students to ask and answer questions, form study groups, study online through Google Hangouts (button integrated on site), and share information.
+              </div>
+            <br><br>
+            Rutgers Roommate Search Engine
+            <br><br>
+            <center>
+              <div style="width:70%">
+                Account system website designed to have users register themselves to a roommate search engine in order to help them or others to find the perfect roommate. Includes an advanced search section, a list of roommates filtered through advance search, profile pages for each user, and roommate lists to add potential roommates on their list. 
+                <br><br>
+                <a href="http://rutgersroommate.site11.com" target="_blank"  style="color: #2E9AFE">Check out the site</a>
+              </div>
+            <br><br>
+            PVHS GPA Calculator
+            <br><br>
+            <center>
+              <div style="width:70%">
+                An old website with PHP/SQL account systems that helps students calculate their GPA (marking period, end-of-year, and current)as well final grade 
+              </div>
+            <br><br>
+            <font size="5">Others</font>
+            <br><br>
+            NES Zelda recreaton
+            <br><br>
+            <center>
+              <div style="width:70%">
+                A game I made in Visual Basic, which is a small segment recreation of the Legend of Zelda for NES.
+              </div>
+              <br><br>
+            <a href="https://www.youtube.com/watch?v=StfCZy4-NRA" target="_blank"  style="color: #2E9AFE">See Video</a>
+
+            <br><br><br><br><br><br><br><br><br><br>
+          </div>
+	
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src = "js/bootstrap.js"></script>
+
+	</body>
+
+
+	
+</html>

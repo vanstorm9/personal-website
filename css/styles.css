@@ -1,0 +1,41 @@
+html, body{
+     background: url(http://nsa33.casimages.com/img/2014/03/28/14032804155474970.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	
+}
+
+.carousel {
+  height: 600px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  top: 250px;
+  z-index: 10;
+}
+
+#second.carousel-caption {
+  top: 25px;
+  z-index: 10;
+}
+
+#third.carousel-caption {
+  top: 150px;
+  left:500px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 600px;
+  background-color: transparent;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 600px;
+}
