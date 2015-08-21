@@ -16,22 +16,24 @@
 
 		
     <script>
-        function goToByScroll(id){
-          // Reove "link" from the ID
-        id = id.replace("link", "");
-          // Scroll
-        $('html,body').animate({
-            scrollTop: $("#"+id).offset().top},
-            'slow');
-    }
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
-    $("#sidebar > ul > li > a").click(function(e) { 
-      alert("Iron Man");
-          // Prevent a page reload when a link is pressed
-        e.preventDefault(); 
-          // Call the scroll function
-        goToByScroll($(this).attr("id"));           
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
     });
+  });
+  </script>
+
+
     </script>
 	</head>
 	
@@ -52,7 +54,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a id ="projectlink" href="#">Projects</a></li>
+                  <li><a id ="projectlink" href="#project">Projects</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
               </nav>
@@ -71,7 +73,7 @@
 
           <div id="sidebar">
             <ul>
-                <li><a id = "projectlink" href="#">Projects</a></li>
+                <li><a id = "projectlink" href="#project">Projects</a></li>
             </ul>
         </div>          
 
@@ -148,7 +150,7 @@
             <br><br>
             Kinect Helper
             <br><br>
-            <center>
+            <center>#project
               <div style="width:70%">
                 Used the Kinect to create a workspace that is able to sense the presence of its owner. By using object detection, the
                 Kinect is able to call a bash script that gives the Kinect control of the computer based on user input, creating a smart workspace. In this case the Kinect can sense when you get up from your chair and will automatically shut off the screen, this saves power and is more convenient than having to do it manually. We also included other features such as the ability to change the brightness of the screen using a hand held up to the sensor. Any other features can be added to the program and controlled with a hand held up to the Kinect.
