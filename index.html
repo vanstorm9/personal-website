@@ -6,32 +6,17 @@
     <link href="css/cover.css" rel="stylesheet">
     <link href="personal.css" rel="stylesheet">
 
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
     
     <link rel="stylesheet" href="jquery/css/smoothness/jquery-ui-1.8.2.custom.css" /> 
     <script type="text/javascript" src="jquery/js/jquery-1.11.2.min.js"></script> 
     <script type="text/javascript" src="jquery/js/jquery-ui-1.8.2.custom.min.js"></script> 
-
+    <script type="text/javascript" src="scroll.js"></script>
     
 
 		
-    <script>
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-  </script>
+  
 
 
     </script>
@@ -55,7 +40,7 @@
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a id ="projectlink" href="#project">Projects</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="http://docdro.id/ZUKJxEY">Resume</a></li>
                 </ul>
               </nav>
             </div>
@@ -66,16 +51,11 @@
             <h1 class="cover-heading">Anthony Lowhur</h1>
             <p class="lead">Programmer, Hacker, Entrepreneur</p>
             <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+              <a href="#project" class="btn btn-lg btn-default">Learn more</a>
             </p>
           </div>
           <br>
-
-          <div id="sidebar">
-            <ul>
-                <li><a id = "projectlink" href="#project">Projects</a></li>
-            </ul>
-        </div>          
+     
 
           <div class="mastfoot">
             <div class="inner">
@@ -150,7 +130,7 @@
             <br><br>
             Kinect Helper
             <br><br>
-            <center>#project
+            <center>
               <div style="width:70%">
                 Used the Kinect to create a workspace that is able to sense the presence of its owner. By using object detection, the
                 Kinect is able to call a bash script that gives the Kinect control of the computer based on user input, creating a smart workspace. In this case the Kinect can sense when you get up from your chair and will automatically shut off the screen, this saves power and is more convenient than having to do it manually. We also included other features such as the ability to change the brightness of the screen using a hand held up to the sensor. Any other features can be added to the program and controlled with a hand held up to the Kinect.

@@ -1,36 +1,19 @@
-    if(jQuery){
-      alert("YUS");
 
-     } else {
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
-      alert("LOL NOPE")
-     }
-     if(jQuery.DatePicker){
-      alert("YUS AGAIN");
-     } else {
-      alert("SURRY D:")
-     }
-
-
-
-
-    function goToByScroll(id){
-      alert("Hi Scroll");
-          // Reove "link" from the ID
-        id = id.replace("link", "");
-          // Scroll
-        $('html,body').animate({
-            scrollTop: $("#"+id).offset().top},
-            'slow');
-    }
-
-    $("#sidebar > ul > li > a").click(function(e) { 
-      alert("Hello scrolling man");
-          // Prevent a page reload when a link is pressed
-        e.preventDefault(); 
-          // Call the scroll function
-        goToByScroll($(this).attr("id"));           
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
     });
+  });
 
     
 
