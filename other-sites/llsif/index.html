@@ -1,0 +1,30 @@
+<html>
+	<head>
+	</head>
+
+
+	<script>
+
+	function homeClick() {
+    	var x = document.getElementById("homeScreen").useMap = "#clickmap";
+    	//alert("Hello World");
+    	//var audio = new Audio('audio/hazukashii.mp3');
+    	var audio = new Audio('audio/puni-puni.mp3');
+		audio.play();
+		//alert("Other Hello World");
+	}
+	</script>
+
+	<body>
+	<center>
+	<img id='homeScreen' src='images/beta0.jpg' usemap="#clickmap">
+	</center>
+
+	<map name="clickmap">
+  		<area shape="rect" coords="100,500,260,600" onclick="homeClick()">
+	</map>
+
+	</body>
+
+
+</html>
