@@ -1,18 +1,80 @@
 <html>
+	<!--
+	NOTE: This is a basic version of the LLSIF waifu simulator
+
+
+	-->
+
 	<head>
 	</head>
 
 
 	<script>
 
+	function commandSelect(mode)
+	{
+		// mode == 0 is home button
+		// mode == 1 is waifu button
+
+		var audioPath = "audio/";
+		var waifuName = "hanayo/";
+		var file;
+
+
+		// Number between 0 and maxNum
+		
+
+		var n = 0;
+
+		if(mode == 0){
+			// Home button RNG
+			var maxNum = 2;
+			n = Math.floor(Math.random() * maxNum);
+			file = "home/";
+		} else if (mode == 1){
+			// Waifu button RNG
+			var maxNum = 3;
+			n = Math.floor(Math.random() * maxNum);
+			file = "waifu/";
+		}
+
+
+		
+		if(mode == 1){
+			// Waifu Button
+			if(n == 0){
+				var soundName = "puni-puni.mp3";
+			} else if (n == 1){
+				var soundName = "hazukashii.mp3";
+			} else if (n == 2){
+				var soundName = "nani-shiteiru-desu-ka.mp3";
+			}
+		}
+		var superString = "".concat(audioPath, waifuName, file, soundName);
+		var audio = new Audio(superString);
+		
+
+		audio.play();
+
+	}
+
 	function homeClick() {
     	var x = document.getElementById("homeScreen").useMap = "#clickmap";
-    	//alert("Hello World");
-    	//var audio = new Audio('audio/hazukashii.mp3');
-    	var audio = new Audio('audio/puni-puni.mp3');
-		audio.play();
+		alert("Hello World");
+	}
+
+
+	function waifuClick()
+	{
+		
+		var x = document.getElementById("homeScreen").useMap = "#clickmap";
+
+		var mode = 1;
+		commandSelect(mode);
+
 		//alert("Other Hello World");
 	}
+
 	</script>
 
 	<body>
@@ -21,7 +83,10 @@
 	</center>
 
 	<map name="clickmap">
-  		<area shape="rect" coords="100,500,260,600" onclick="homeClick()">
+		<!-- coords = width1, height1, width2, height2-->
+
+  		<area shape="rect" coords="100,500,225,600" onclick="homeClick()">
+  		<area shape="rect" coords="100,0,560,520" onclick="waifuClick()">
 	</map>
 
 	</body>
