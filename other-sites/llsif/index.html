@@ -11,10 +11,16 @@
 
 	<script>
 
+	var globalAudio = null;
+
 	function commandSelect(mode)
 	{
 		// mode == 0 is home button
 		// mode == 1 is waifu button
+		if (globalAudio!=null){
+			globalAudio.pause();
+		}
+		
 
 		var audioPath = "audio/";
 		var waifuName = "hanayo/";
@@ -51,10 +57,10 @@
 			}
 		}
 		var superString = "".concat(audioPath, waifuName, file, soundName);
-		var audio = new Audio(superString);
+		globalAudio = new Audio(superString);
 		
 
-		audio.play();
+		globalAudio.play();
 
 	}
 
