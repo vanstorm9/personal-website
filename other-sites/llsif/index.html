@@ -6,10 +6,18 @@
 	-->
 
 	<head>
+		<title>Love Live SIF Waifu Simulator</title>
+		<center><h1>Love Live SIF Waifu Simulator</h1>
+		Click on the waifu or any buttons to have her speak. </br></br>
+		</center>
+
 	</head>
 
 
 	<script>
+	//var backgroundMusic = new Audio("audio/background-music.mp3");
+	//backgroundMusic.play();
+
 
 	var globalAudio = null;
 
@@ -17,6 +25,8 @@
 	{
 		// mode == 0 is home button
 		// mode == 1 is waifu button
+		// mode == 2 is story button
+		// mode == 3 is member button
 		if (globalAudio!=null){
 			globalAudio.pause();
 		}
@@ -34,39 +44,42 @@
 
 		if(mode == 0){
 			// Home button RNG
-			var maxNum = 2;
+			var maxNum = 15;
 			n = Math.floor(Math.random() * maxNum);
 			file = "home/";
 		} else if (mode == 1){
 			// Waifu button RNG
-			var maxNum = 3;
+			var maxNum = 11;
 			n = Math.floor(Math.random() * maxNum);
 			file = "waifu/";
+		} else if (mode == 2){
+			// Story button RNG
+			var maxNum = 1;
+			n = Math.floor(Math.random() * maxNum);
+			file = "story/";
+		} else if (mode == 3){
+			// Member button RNG
+			var maxNum = 1;
+			n = Math.floor(Math.random() * maxNum);
+			file = "member/";
 		}
 
 
-		
-		if(mode == 1){
-			// Waifu Button
-			if(n == 0){
-				var soundName = "puni-puni.mp3";
-			} else if (n == 1){
-				var soundName = "hazukashii.mp3";
-			} else if (n == 2){
-				var soundName = "nani-shiteiru-desu-ka.mp3";
-			}
-		}
-		var superString = "".concat(audioPath, waifuName, file, soundName);
+
+		var superString = "".concat(audioPath, waifuName, file, n, ".mp3");
 		globalAudio = new Audio(superString);
 		
-
 		globalAudio.play();
 
 	}
 
 	function homeClick() {
     	var x = document.getElementById("homeScreen").useMap = "#clickmap";
-		alert("Hello World");
+
+    	alert("Home");
+		//var mode = 0;
+		//commandSelect(mode);
+
 	}
 
 
@@ -77,8 +90,23 @@
 
 		var mode = 1;
 		commandSelect(mode);
+	}
 
-		//alert("Other Hello World");
+	function storyClick()
+	{
+
+		var x = document.getElementById("homeScreen").useMap = "#clickmap";
+
+		var mode = 2;
+		commandSelect(mode);
+	}
+
+	function memberClick()
+	{
+		var x = document.getElementById("homeScreen").useMap = "#clickmap";
+
+		var mode = 3;
+		commandSelect(mode);
 	}
 
 	</script>
@@ -90,9 +118,15 @@
 
 	<map name="clickmap">
 		<!-- coords = width1, height1, width2, height2-->
-
+		<audio autoplay loop>
+			<source src="audio/background-music.mp3" type="audio/mp3" />
+		</audio>
   		<area shape="rect" coords="100,500,225,600" onclick="homeClick()">
+  		<area shape="rect" coords="227,500,353,600" onclick="storyClick()">
+  		<area shape="rect" coords="356,500,482,600" onclick="memberClick()">
+
   		<area shape="rect" coords="100,0,560,520" onclick="waifuClick()">
+
 	</map>
 
 	</body>
