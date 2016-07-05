@@ -1,4 +1,8 @@
 var globalAudio = null;
+var backgroundAudio = 
+
+globalAudio = new Audio("audio/background-music.mp3");
+globalAudio.play();
 
 	function commandSelect(mode)
 	{
