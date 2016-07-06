@@ -1,9 +1,8 @@
 <html>
-	<!--
-	NOTE: This is a basic version of the LLSIF waifu simulator
-
-
-	-->
+	
+	<?php
+		echo "Hello World";
+	?>
 
 	<head>
 	<script src="audio-handle.js"></script>
@@ -22,8 +21,8 @@
 	<body>
 	<center>
 	<div id="container">
-    	<img id='homeScreen' src='images/background0.png' usemap="#clickmap">
-    	<img id="idol_img" src='images/hanayo0.png'>
+    	<img id='homeScreen' src='images/background0.png'>
+    	<img id="idol_img" src='images/hanayo0.png' usemap="#waifumap">
 	</div>
 
 	
@@ -32,21 +31,22 @@
 
 
 
-
-	<!--
-	<map name="clickmap">
-
-		<audio autoplay loop>
+	<audio autoplay loop>
 			<source src="audio/background-music.mp3" type="audio/mp3" />
 		</audio>
+	
+	<map name="waifumap">
+
+		
+		<!--
   		<area shape="rect" coords="100,500,225,600" onclick="homeClick()">
   		<area shape="rect" coords="227,500,353,600" onclick="storyClick()">
   		<area shape="rect" coords="356,500,482,600" onclick="memberClick()">
-
-  		<area shape="rect" coords="100,0,560,520" onclick="waifuClick()">
+		-->
+  		<area shape="rect" coords="100,100,540,540" onclick="waifuClick()">
 
 	</map>
-	-->
+	
 	</body>
 
 
