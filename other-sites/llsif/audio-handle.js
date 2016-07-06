@@ -1,5 +1,8 @@
 var globalAudio = null;
 
+function edit(){
+document.getElementById("idol_img").src="images/honoka0.png";
+}
 
 	function commandSelect(mode)
 	{
