@@ -1,0 +1,19 @@
+#homeScreen{
+    width:1160;
+    height:640;
+}
+
+#container{
+    position: relative;
+    width: 1190px;
+    height: 640px;
+}
+
+#idol_img{
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+    height: 640px;
+    width: 640px;
+    
+}
