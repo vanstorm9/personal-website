@@ -24,7 +24,7 @@ var globalAudio = null;
 
 		if(mode == 0){
 			// Home button RNG
-			var maxNum = 10;
+			var maxNum = 19;
 			n = Math.floor(Math.random() * maxNum);
 			file = "home/";
 		} else if (mode == 1){
