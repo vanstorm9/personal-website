@@ -1,11 +1,11 @@
 #homeScreen{
-    width:1160;
+    width:1060;
     height:640;
 }
 
 #container{
     position: relative;
-    width: 1160px;
+    width: 1060px;
     height: 640px;
 }
 
@@ -13,8 +13,29 @@
 
 #idol_img{
     position: absolute;
-    bottom: 10px;
-    left: 10%;
+    bottom: 1%;
+    left: 6%;
  
     
+}
+
+#home_but{
+    position: absolute;
+    bottom: -1%;
+    left: 6%;
+
+}
+
+#story_but{
+    position: absolute;
+    bottom: -1.5%;
+    left: 19%;
+
+}
+
+#member_but{
+    position: absolute;
+    bottom: -1.5%;
+    left: 31%;
+
 }
