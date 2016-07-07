@@ -1,12 +1,17 @@
 var globalAudio = null;
 var globalWaifu = 'honoka';
 
+setTimeout(function() {
+    commandSelect(0);
+}, 1000)
+
 
 function changeWaifu(name){
 
 	var path = "images/" + name +"0.png";
 	document.getElementById("idol_img").src=path;
 	globalWaifu = name;
+	commandSelect(0)
 
 }
 
@@ -33,7 +38,7 @@ function changeWaifu(name){
 
 		if(mode == 0){
 			// Home button RNG
-			var maxNum = 19;
+			var maxNum = 14;
 			n = Math.floor(Math.random() * maxNum);
 			file = "home/";
 		} else if (mode == 1){
