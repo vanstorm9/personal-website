@@ -6,12 +6,20 @@ setTimeout(function() {
 }, 1000)
 
 
+
+
 function changeWaifu(name){
 
 	var path = "images/" + name +"0.png";
 	document.getElementById("idol_img").src=path;
 	globalWaifu = name;
-	commandSelect(0)
+
+	if (globalAudio!=null){
+			globalAudio.pause();
+	}
+	setTimeout(function() {
+    	commandSelect(0);
+	}, 500)
 
 }
 
@@ -68,6 +76,9 @@ function changeWaifu(name){
 	}
 
 	function homeClick() {
+		//document.getElementById("home_but").src="images/home-button.png";
+
+
     	var x = document.getElementById("homeScreen").useMap = "#clickmap";
 
 		var mode = 0;
@@ -101,3 +112,27 @@ function changeWaifu(name){
 		var mode = 3;
 		commandSelect(mode);
 	}
+
+	function hoverInBut(clicked_id)
+	{
+		if(clicked_id == 'home_but'){
+			document.getElementById("home_but").src="images/home-button-hover.png";
+		} else if(clicked_id == 'story_but'){
+			document.getElementById("story_but").src="images/story-button-hover.png";
+		} else if(clicked_id == 'member_but'){
+			document.getElementById("member_but").src="images/member-button-hover.png";
+		}
+		
+	}
+
+	function hoverOutBut(clicked_id)
+	{
+		if(clicked_id == 'home_but'){
+			document.getElementById("home_but").src="images/home-button.png";
+		} else if(clicked_id == 'story_but'){
+			document.getElementById("story_but").src="images/story-button.png";
+		} else if(clicked_id == 'member_but'){
+			document.getElementById("member_but").src="images/member-button.png";
+		}
+	}
+

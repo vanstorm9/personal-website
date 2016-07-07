@@ -3,26 +3,26 @@
 	<head>
 	<script src="audio-handle.js"></script>
 	<link rel="stylesheet" type="text/css" href="scene.css">
-
-		<title>Love Live SIF Waifu Simulator</title>
-		<center><h1>Love Live SIF Waifu Simulator</h1>
-		Click on the waifu or any buttons to have her speak. </br></br>
-		</center>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<title>Love Live SIF Waifu Simulator</title>
+		
 
 	</head>
 
 
 	
 
-	<body>
+	<body style="background-color:#FF69B4;">
 	<center>
+	<h1>Love Live SIF Waifu Simulator</h1>
+	Click on the waifu or any buttons to have her speak. </br></br>
 
 	<div id="container">
     	<img id='homeScreen' src='images/background0.png'>
-    	<img id="idol_img" src='images/honoka0.png' usemap="#waifumap" onclick="waifuClick()">
-    	<img id="home_but" src='images/home-button.png' usemap="#waifumap" onclick="homeClick()">
-    	<img id="story_but" src='images/story-button.png' usemap="#waifumap" onclick="storyClick()">
-    	<img id="member_but" src='images/member-button.png' usemap="#waifumap" onclick="memberClick()">
+    	<img id="idol_img" src='images/honoka0.png' onclick="waifuClick()">
+    	<img id="home_but" src='images/home-button.png' onmouseover='hoverInBut(this.id)' onmouseout='hoverOutBut(this.id)' onclick='homeClick()'>
+    	<img id="story_but" src='images/story-button.png' onmouseover='hoverInBut(this.id)' onmouseout='hoverOutBut(this.id)' onclick="storyClick()">
+    	<img id="member_but" src='images/member-button.png' onmouseover='hoverInBut(this.id)' onmouseout='hoverOutBut(this.id)' onclick="memberClick()">
 	</div>
 
 	</br>
@@ -48,21 +48,7 @@
 	<audio autoplay loop>
 			<source src="audio/background-music.mp3" type="audio/mp3" />
 		</audio>
-	
-	<!--
-	<map name="waifumap">
 
-		
-		
-  		<area shape="rect" coords="100,500,225,600" onclick="homeClick()">
-  		
-  		<area shape="rect" coords="227,500,353,600" onclick="storyClick()">
-  		<area shape="rect" coords="356,500,482,600" onclick="memberClick()">
-		
-  		<area shape="rect" coords="100,100,540,540" onclick="waifuClick()">
-
-	</map>
-	-->
 	</body>
 
 
