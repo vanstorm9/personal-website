@@ -7,6 +7,13 @@ setTimeout(function() {
 
 
 
+function refreshBubble()
+{
+	$(document).ready(function(){
+		$("#speech-bubble").hide();
+		$("#speech-bubble").fadeIn();
+	});
+}
 
 function changeWaifu(name){
 
@@ -73,6 +80,8 @@ function changeWaifu(name){
 		
 		globalAudio.play();
 
+		refreshBubble();
+
 	}
 
 	function homeClick() {
@@ -84,6 +93,7 @@ function changeWaifu(name){
 		var mode = 0;
 		commandSelect(mode);
 
+
 	}
 
 
@@ -94,6 +104,7 @@ function changeWaifu(name){
 
 		var mode = 1;
 		commandSelect(mode);
+		
 	}
 
 	function storyClick()

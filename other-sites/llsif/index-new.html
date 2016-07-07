@@ -4,9 +4,10 @@
 	<script src="audio-handle.js"></script>
 	<link rel="stylesheet" type="text/css" href="scene.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
 	<title>Love Live SIF Waifu Simulator</title>
 		
-
 	</head>
 
 
@@ -24,7 +25,7 @@
     	<img id="story_but" src='images/story-button.png' onmouseover='hoverInBut(this.id)' onmouseout='hoverOutBut(this.id)' onclick="storyClick()">
     	<img id="member_but" src='images/member-button.png' onmouseover='hoverInBut(this.id)' onmouseout='hoverOutBut(this.id)' onclick="memberClick()">
 
-    	<div class="bubble">
+    	<div id="speech-bubble" class="bubble" style='display:none;'>
     		<div style='opacity: 2.0;'>
 		 	 This is a sample comment. This is what it will look like on the page when people leave a comment.
 		 	 </div>
