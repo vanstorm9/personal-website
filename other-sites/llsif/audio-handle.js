@@ -1,7 +1,13 @@
 var globalAudio = null;
+var globalWaifu = 'honoka';
 
-function edit(){
-document.getElementById("idol_img").src="images/honoka0.png";
+
+function changeWaifu(name){
+
+	var path = "images/" + name +"0.png";
+	document.getElementById("idol_img").src=path;
+	globalWaifu = name;
+
 }
 
 	function commandSelect(mode)
@@ -16,7 +22,7 @@ document.getElementById("idol_img").src="images/honoka0.png";
 		
 
 		var audioPath = "audio/";
-		var waifuName = "hanayo/";
+		var waifuName = globalWaifu + "/";
 		var file;
 
 

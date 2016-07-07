@@ -9,6 +9,8 @@
     height: 640px;
 }
 
+/* height should be 591px */
+
 #idol_img{
     position: absolute;
     bottom: 10px;
