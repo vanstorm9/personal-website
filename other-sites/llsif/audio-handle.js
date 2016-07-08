@@ -20,21 +20,18 @@ function refreshBubble()
 function changeWaifu(name){
 
 	var path = "images/" + name +"0.png";
-	//document.getElementById("idol_img").src=path;
-	$('idol_img').attr('src', path).load(function() {   
-		globalWaifu = name;
+	document.getElementById("idol_img").src=path;
 
-		if (globalAudio!=null){
-				globalAudio.pause();
-		}
+	globalWaifu = name;
+
+	if (globalAudio!=null){
+			globalAudio.pause();
+	}
 
 
-		setTimeout(function() {
-	    	commandSelect(0);
-		}, 500)
-	});  
-
-	
+	setTimeout(function() {
+    	commandSelect(0);
+	}, 500)
 
 }
 
