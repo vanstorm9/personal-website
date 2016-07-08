@@ -15,18 +15,26 @@ function refreshBubble()
 	});
 }
 
+
+
 function changeWaifu(name){
 
 	var path = "images/" + name +"0.png";
-	document.getElementById("idol_img").src=path;
-	globalWaifu = name;
+	//document.getElementById("idol_img").src=path;
+	$('idol_img').attr('src', path).load(function() {   
+		globalWaifu = name;
 
-	if (globalAudio!=null){
-			globalAudio.pause();
-	}
-	setTimeout(function() {
-    	commandSelect(0);
-	}, 500)
+		if (globalAudio!=null){
+				globalAudio.pause();
+		}
+
+
+		setTimeout(function() {
+	    	commandSelect(0);
+		}, 500)
+	});  
+
+	
 
 }
 
