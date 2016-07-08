@@ -80,7 +80,9 @@ function changeWaifu(name){
 		
 		globalAudio.play();
 
-		changeSpeechText();
+		var pathString = "".concat(audioPath, waifuName, file);
+
+		changeSpeechText(pathString, n);
 		refreshBubble();
 
 	}
@@ -150,18 +152,19 @@ function changeWaifu(name){
 
 
 
-	function changeSpeechText () {
+	function changeSpeechText (path, n) {
 
-		
+		var pathString = "".concat(audioPath, "speech")
+
         var client = new XMLHttpRequest();
-      	client.open('GET', './audio/honoka/waifu/speech.txt');
+      	client.open('GET', pathString);
         //client.open('GET', './speech.txt');
         client.onreadystatechange = function()
         {
             if( client.responseText != '' )
             {
                 var txt = client.responseText.split("\n");
-                document.getElementById("speech-text").innerHTML = txt[0];
+                document.getElementById("speech-text").innerHTML = txt[n];
             }
         }
         
