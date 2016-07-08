@@ -154,7 +154,7 @@ function changeWaifu(name){
 
 	function changeSpeechText (path, n) {
 
-		var pathString = "".concat(audioPath, "speech")
+		var pathString = "".concat(audioPath, "speech.txt")
 
         var client = new XMLHttpRequest();
       	client.open('GET', pathString);
