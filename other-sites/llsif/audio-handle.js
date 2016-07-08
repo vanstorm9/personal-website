@@ -153,26 +153,6 @@ function changeWaifu(name){
 
 
 	function changeSpeechText (path, n) {
-/*
-  var xhttp;
-  var pathString = "".concat("./", path, "speech.txt");
-  if (window.XMLHttpRequest) {
-    // code for modern browsers
-    xhttp = new XMLHttpRequest();
-    } else {
-    // code for IE6, IE5
-    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("speech-text").innerHTML = xhttp.responseText;
-    }
-  };
-  alert(pathString);
-  xhttp.open("GET", pathString, true);
-  xhttp.send();
-*/
-
 		
 		var pathString = "".concat("./", path, "speech.txt");
 		var client;
@@ -183,9 +163,7 @@ function changeWaifu(name){
 		    // code for IE6, IE5
 		    client = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-      	//client.open('GET', pathString);
-      	client.open('GET', './audio/honoka/waifu/speech.txt');
-        //alert(client.responseText);
+
         client.onreadystatechange = function()
         {
             if( client.responseText != '' )
