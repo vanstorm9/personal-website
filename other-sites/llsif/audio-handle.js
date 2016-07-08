@@ -154,9 +154,8 @@ function changeWaifu(name){
 
 		
         var client = new XMLHttpRequest();
-      	//client.open('GET', './audio/honoka/waifu/speech.txt');
-        //$.get('./speech.txt', function(data){text=data;
-        client.open('GET', './speech.txt', true);
+      	client.open('GET', './audio/honoka/waifu/speech.txt');
+        //client.open('GET', './speech.txt');
         client.onreadystatechange = function()
         {
             if( client.responseText != '' )
