@@ -1,0 +1,3 @@
+header('Access-Control-Allow-Origin: *')
+穂乃果がサポートしちゃうよー
+呼んだ呼んだ？

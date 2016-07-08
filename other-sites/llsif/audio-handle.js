@@ -80,6 +80,7 @@ function changeWaifu(name){
 		
 		globalAudio.play();
 
+		changeSpeechText();
 		refreshBubble();
 
 	}
@@ -147,3 +148,44 @@ function changeWaifu(name){
 		}
 	}
 
+
+
+	function changeSpeechText () {
+
+
+  var xhttp;
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("speech-text").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "speech.txt", true);
+  xhttp.send();
+
+		/*
+        var client = new XMLHttpRequest();
+      	//client.open('GET', './audio/honoka/waifu/speech.txt');
+        //$.get('./speech.txt', function(data){text=data;
+        client.open('GET', './speech.txt', true);
+        client.onreadystatechange = function()
+        {
+
+        	if (client.readyState == 4 && client.status == 200) {
+        		alert('hello');
+		      document.getElementById("speech-text").innerHTML = client.responseText;
+		    }
+            //if( client.responseText != '' )
+            //{
+            //    var txt = client.responseText.split("\n");
+            //    document.getElementById("speech-text").innerHTML = txt[0];
+            //}
+        }
+        */
+    }

@@ -48,7 +48,7 @@
     bottom: 18%;
     left: 7%;
 
-    max-width:420px;
+    width:420px;
     min-height:1.5em;
     padding: 16px;
     background: #FFFFFF;
@@ -95,8 +95,3 @@
     filter: alpha(opacity=70);
 }
 
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#div1").fadeIn();
-    });
-});
