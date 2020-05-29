@@ -1,5 +1,5 @@
 body{margin:0;
-background-image:url('css/back.jpg');
+background-image:url('back.jpg');
 
 no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -9,7 +9,7 @@ no-repeat center center fixed;
 }
 
 .roundedImage {
-    background: url(css/self.jpg);
+    background: url(self.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto;
@@ -23,7 +23,7 @@ no-repeat center center fixed;
 }
 
 .roundedImageAI {
-    background: url(css/ai.jpg);
+    background: url(ai.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto;
@@ -37,7 +37,7 @@ no-repeat center center fixed;
 }
 
 .roundedImageHCI {
-    background: url(css/hci.jpg);
+    background: url(hci.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto;
