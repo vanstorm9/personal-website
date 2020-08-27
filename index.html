@@ -144,77 +144,64 @@
 
               </div>
             </center>
-            <!--
+            
             <br><br>
-            Image recognition of 10,856 unique Yugioh cards
-            <br><br>
-            <div class="lazy slider" data-sizes="50vw" style="height:410px;">
+            One shot learning (image recogntion) on 10,856 unique Yugioh cards 
+            <div class="lazy slider" data-sizes="50vw" style="height:440px;">
               <div>
-                <br><br><br>
-                Samples of recognized cards
+                <br>
+                 Small samples of recognized cards
                 <img data-lazy="images/yuai_0.png" data-srcset="images/yuai_0.png 650w, images/yuai_0.png 960w" data-sizes="100vw">
                 (Press the left or right arrows to change photos)
               </div>
               <div>
-                <br><br><br>
-                Trump's face swapped with Putin's
-                <img data-lazy="images/df_1.jpg" data-srcset="images/df_1.jpg 650w, images/df_1.jpg 960w" data-sizes="100vw">
+                <br>
+                Comparing similarity of input image with dataset of cards (official art of cards). Left is input image while right are card arts from dataset.
+                <img data-lazy="images/yuai_1.png" data-srcset="images/yuai_1.png 650w, images/yuai_1.png 960w" data-sizes="100vw">
 
               </div>
                <div>
-                <br><br>
-                Trump's face swapped with Putin's
-                <img data-lazy="images/df_2.jpg" data-srcset="images/df_2.jpg 650w, images/df_2.jpg 960w" data-sizes="100vw">
+                <br>
+                Even if input image (left) was under very dark conditions, Dark Magician still gets recognized.
+                <img data-lazy="images/yuai_2.png" data-srcset="images/yuai_2.png 650w, images/yuai_2.png 960w" data-sizes="100vw">
               </div>
                <div>
-                <br><br><br>
-                Putin's face swapped with Trump's
-                <img data-lazy="images/df_3.jpg" data-srcset="images/df_3.jpg 650w, images/df_3.jpg 960w" data-sizes="100vw">
+                <br>
+                
+                <img data-lazy="images/yuai_3.png" data-srcset="images/yuai_3.png 650w, images/yuai_3.png 960w" data-sizes="100vw">
               </div>
               <div>
-                <br><br><br>
-                Obama's face swapped with Trump's
-                <img data-lazy="images/df_4.jpg" data-srcset="images/df_4.jpg 650w, images/df_4.jpg 960w" data-sizes="100vw">
+                <br>
+                Left card has card sleeve, right one is without
+                <img data-lazy="images/yuai_4.png" data-srcset="images/yuai_4.png 650w, images/yuai_4.png 960w" data-sizes="100vw">
               </div>
               <div>
-                A girl's face (Shuka) swapped with Trump's
-                <img data-lazy="images/df_5.jpg" data-srcset="images/df_5.jpg 650w, images/df_5.jpg 960w" data-sizes="100vw">
+                Batch of different images under different contrast / lighting conditions. Left of each pair is input image, right is the card art from database
+                <img data-lazy="images/yuai_5.png" data-srcset="images/yuai_5.png 650w, images/yuai_5.png 960w" data-sizes="100vw">
               </div>
               <div>
-                <br><br><br>
-                A girl's face (Shuka) swapped with Trump's
-                <img data-lazy="images/df_6.jpg" data-srcset="images/df_6.jpg 650w, images/df_6.jpg 960w" data-sizes="100vw">
+                <br>
+                The AI classifier managed to achieve around 99% accuracy on all the cards in the game of Yugioh
+                <img data-lazy="images/yuai_6.png" data-srcset="images/yuai_6.png 650w, images/yuai_6.png 960w" data-sizes="100vw">
               </div>
-              <div>
-                Arisa's face swapped with Shuka's
-                <img data-lazy="images/df_7.jpg" data-srcset="images/df_7.jpg 650w, images/df_7.jpg 960w" data-sizes="100vw">
-              </div>
-              <div>
-                Arisa's face swapped with Shuka's
-                <img data-lazy="images/df_11.jpg" data-srcset="images/df_11.jpg 650w, images/df_11.jpg 960w" data-sizes="100vw">
-              </div>
-              <div>
-                Shuka's face swapped with Arisa
-                <img data-lazy="images/df_9.jpg" data-srcset="images/df_9.jpg 650w, images/df_9.jpg 960w" data-sizes="100vw">
-              </div>
-              <div>
-                <br><br><br>
-                Arisa's face swapped with Shuka's
-                <img data-lazy="images/df_10.jpg" data-srcset="images/df_10.jpg 650w, images/df_10.jpg 960w" data-sizes="100vw">
-              </div>
+           
  
        
             </div>
-            <br><br>
+
             <center>
               <div style="width:70%">
-                Made a machine learning classifier to recognize all 10,856 Yugioh cards in the game. Each card has a single card art associated with it, meaning each 10,856 classes had only one image associated. To address these limitations, one shot learning was used by implementing triplet net along with triplet loss. Image augmentation and blur pooling was used to allow the classifier to achieve around 99% accuracy on all 10,856 cards under different lighting / contrast conditions. 
+                Made a machine learning classifier to recognize all 10,856 Yugioh cards in the game. Each card has a single card art associated with it, meaning each of the 10,856 classes had only 1 image to train on. To address these limitations, one shot learning was used by implementing triplet net based on ResNet50 along with triplet loss along with ORB algorithm for ranking support. Image augmentation and blur pooling was used to allow the classifier to achieve around 99% accuracy on all 10,856 cards under different lighting / contrast conditions. 
+                <br><br>
+                <a href = "https://www.reddit.com/r/yugioh/comments/i0m9dm/i_made_an_ai_that_recognizes_over_10000_yugioh/"  target="_blank"  style="color: #2E9AFE">
+                  Click here to view more information about the Yugioh one-shot image classifier
+                </a>
                 <br><br>
                 
 
               </div>
             </center>
-            -->
+           
 
             <br><br>
             Face Tracking via Haar Classification and Lucas Kanade
@@ -230,19 +217,7 @@
               </div>
             </center>
         
-            <br><br>
-            Lyrics Generator Based on Markov Chains
-            <br><br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O0VlHfLAVzs" frameborder="0" allowfullscreen></iframe>
-            <br><br>
-            <center>
-              <div style="width:70%">
-                Implemented markov chains on lyrics data scrapped from the web to create program that can generate its own unique set of lyrics based on genre. Also have the capability of creating lyrics based on syllable count per line. Part of a long term project to create a full AI song composer. 
-                <br><br>
-                
-
-              </div>
-            </center>
+           
 
             <br><br>
             Trash Detection on the Beach for Autonomous Drones though Sand Segmentation
@@ -444,23 +419,62 @@
             </center>
 
             </center>
-            <br><br>
-            Hand-drawn graphs to LATEX translator
-            <br><br>
-            
-              <a href="https://github.com/aliang8/Paper2LaTeX" target="_blank"><img src= "images/graph0.png" width="340" height="200"><img src= "images/graph1.png" width="340" height="200"></a>
 
-            <br><br>
-            <center>
-              <div style="width:70%">
-                Implented computer vision and machine learning in order to analyze a hand-drawn graph on paper, seach and analyze shapes such as nodes and lines, and translate them into a more tidy and neat LATEX graph. Helped plan computer vision algorithms to detect nodes and lines while worked on optical character recognitiion and arrow direction detection.
+
+             <br><br>
+             Terms Of Service Highlighter (TOSH)
+
+
+
+            <div class="lazy slider" data-sizes="50vw" style="height:410px;">
+              <div>
                 <br><br>
-                Placed in top 30 hacks in PennApps Winter 2017 hackathon.
+                Form to allow users to write a complaint
+                <img src= "images/TOSH-img4.png" width="100%" height="auto">
+                (Press the left or right arrows to change photos)
+              </div>
+              <div>
+                <br><br>
+                Hightlighted sections of a terms of service document
+                <img src= "images/TOSH-img0.png" width="100%" height="auto">
+                
+              </div>
+              
+              <div>
+                <br><br>
+                Sample terms of service document
+                <img src= "images/TOSH-img5.png" width="100%" height="auto">
+                
+              </div>
+              <div>
+                <br><br>
+                Results from using complaints and terms of service from Hotels.com
+                <img src= "images/TOSH-img1.jpg" width="100%" height="auto">
+                
+              </div>
+              <div>
+                <br><br>
+                Results from using complaints and terms of service from Retro Fitness
+                <img src= "images/TOSH-img3.jpg" width="100%" height="auto">
+                
+              </div>
+
+            </div>
+
+            <center>
+            
+              <div style="width:70%">
+                This web app uses natural language processing in order to highlight the most relavent and complained about sections in a terms of service document. This is accomplished by taking a list of complaints, preform text-processing to filter out stop words, calculating the frequency-term matrix of the complaints and sections of terms of service, and perform cosine-simularity between complaints and terms of service section. This allows us to get a ranked list of relevent sections of terms of service to warn users of possible texts in a contract that would be crucial to read. Made using Python NTLK and Python Flask.
+                <br><br>
+                Won the "Best Hack for the NYC community" at TechFestival 2019.
                 <br><br>
                 
 
               </div>
             </center>
+
+
+
 
              <br><br>
             CNN-LSTM Video Classifier 
@@ -586,63 +600,23 @@
 
 
 
-
-
-
-             <br><br>
-             Terms Of Service Highlighter (TOSH)
-
-
-
-            <div class="lazy slider" data-sizes="50vw" style="height:410px;">
-              <div>
-                <br><br>
-                Hightlighted sections of a terms of service document
-                <img src= "images/TOSH-img0.png" width="100%" height="auto">
-                (Press the left or right arrows to change photos)
-              </div>
-              <div>
-                <br><br>
-                Form to allow users to write a complaint
-                <img src= "images/TOSH-img4.png" width="100%" height="auto">
-                
-              </div>
-              <div>
-                <br><br>
-                Sample terms of service document
-                <img src= "images/TOSH-img5.png" width="100%" height="auto">
-                
-              </div>
-              <div>
-                <br><br>
-                Results from using complaints and terms of service from Hotels.com
-                <img src= "images/TOSH-img1.jpg" width="100%" height="auto">
-                
-              </div>
-              <div>
-                <br><br>
-                Results from using complaints and terms of service from Retro Fitness
-                <img src= "images/TOSH-img3.jpg" width="100%" height="auto">
-                
-              </div>
-
-            </div>
-
-            <center>
+            <br><br>
+            Hand-drawn graphs to LATEX translator
+            <br><br>
             
+              <a href="https://github.com/aliang8/Paper2LaTeX" target="_blank"><img src= "images/graph0.png" width="340" height="200"><img src= "images/graph1.png" width="340" height="200"></a>
+
+            <br><br>
+            <center>
               <div style="width:70%">
-                This web app uses natural language processing in order to highlight the most relavent and complained about sections in a terms of service document. This is accomplished by taking a list of complaints, preform text-processing to filter out stop words, calculating the frequency-term matrix of the complaints and sections of terms of service, and perform cosine-simularity between complaints and terms of service section. This allows us to get a ranked list of relevent sections of terms of service to warn users of possible texts in a contract that would be crucial to read. Made using Python NTLK and Python Flask.
+                Implented computer vision and machine learning in order to analyze a hand-drawn graph on paper, seach and analyze shapes such as nodes and lines, and translate them into a more tidy and neat LATEX graph. Helped plan computer vision algorithms to detect nodes and lines while worked on optical character recognitiion and arrow direction detection.
                 <br><br>
-                Won the "Best Hack for the NYC community" at TechFestival 2019.
+                Placed in top 30 hacks in PennApps Winter 2017 hackathon.
                 <br><br>
                 
 
               </div>
             </center>
-
-
-
-
 
             <br><br>
             Road Segmentation For Autonomous Vehicles
@@ -652,6 +626,20 @@
             <center>
               <div style="width:70%">
                 Designed a simple script that uses histogram backprojection along with morphological transform in order detect a road in a scene despite any large amounts of noise in the picture. Made to be implemented in the DriveAI project, an initiative for open-source autonomous vehicles.
+                <br><br>
+                
+
+              </div>
+            </center>
+
+             <br><br>
+            Lyrics Generator Based on Markov Chains
+            <br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/O0VlHfLAVzs" frameborder="0" allowfullscreen></iframe>
+            <br><br>
+            <center>
+              <div style="width:70%">
+                Implemented markov chains on lyrics data scrapped from the web to create program that can generate its own unique set of lyrics based on genre. Also have the capability of creating lyrics based on syllable count per line. Part of a long term project to create a full AI song composer. 
                 <br><br>
                 
 
@@ -677,6 +665,65 @@
             <div class="roundedImageHCI">&nbsp;</div>
             <font size="5">Human-Computer Interaction</font>
             <br><br>
+            <br><br>
+            Yugioh Duel Disk (using image recongition)
+            <div class="lazy slider" data-sizes="50vw">
+              <div  style="height:400px;">
+                <br>
+                Video demo of the duel disk
+                <video  width="100%" width="auto" poster="images/yudd_5.jpg" controls>
+                  <source src= "video/yudd_0.mp4" type="video/mp4">
+                </video>
+                (Press the left or right arrows to change photos)
+              </div>
+              <div style="height:410px;">
+                <br><br><br><br><br><br>
+                Set up of prototype duel disk
+                <img data-lazy="images/yudd_5.jpg" data-srcset="images/yudd_5.jpg 650w, images/yudd_5.jpg 960w" data-sizes="100vw">
+             
+              </div>
+              <div>
+                <br><br><br><br><br><br>
+                Touch screen interface
+                <img data-lazy="images/yudd_2.jpg" data-srcset="images/yudd_2.jpg 650w, images/yudd_2.jpg 960w" data-sizes="100vw">
+              </div>
+              <div>
+                <br>
+                Image recognition on one of the cards
+                <img data-lazy="images/yudd_8.jpg" data-srcset="images/yudd_8.jpg 650w, images/yudd_8.jpg 960w" data-sizes="100vw">
+              </div>
+              <div>
+                <br><br><br><br><br><br>
+                When dueling with someone far away, you are able to view and read descriptions of cards on the field
+                <img data-lazy="images/yudd_3.png" data-srcset="images/yudd_3.png 650w, images/yudd_3.png 960w" data-sizes="100vw">
+              </div>
+               
+              <div>
+                <br><br><br><br><br><br>
+                Picture of the two duel disks
+                <img data-lazy="images/yudd_6.jpg" data-srcset="images/yudd_6.jpg 650w, images/yudd_6.jpg 960w" data-sizes="100vw">
+              </div>
+              <div>
+                
+                <img data-lazy="images/yudd_7.jpg" data-srcset="images/yudd_7.jpg 650w, images/yudd_7.jpg 960w" data-sizes="100vw">
+              </div>
+           
+ 
+       
+            </div>
+
+            <center>
+              <div style="width:70%">
+                Made a Yugioh duel disk, a device that allows one to play the card game Yugioh at a distance away. The device is powered by a Jetson Nano (can also be powered by Raspberry Pi) connected to a camera and screen. It uses a machine learning model that I trained on 10,856 unique cards via one shot learning to recognize physical cards through a camera and allows the player to use the card in game. Also capable of network / communication capabilities by using sockets in Python to have two duel disks communicate with each other about information and game state changes. Python Flask was used as the interface to interact with the duel disk.
+                <br><br>
+                <a href = "https://www.reddit.com/r/yugioh/comments/idagc9/i_made_a_functional_duel_disk_powered_by_ai/"  target="_blank"  style="color: #2E9AFE">
+                  Click here to view more information about the Yugioh Duel Disk
+                </a>
+                <br><br>
+                
+
+              </div>
+            </center>
             <br><br>
             Force VR Gauntlet
             <br><br>
@@ -829,9 +876,15 @@
             <div class="lazy slider" data-sizes="50vw" style="height:410px;">
               <div>
                 <br><br>
+                Sample of a generated app
+                <img data-lazy="images/appblox0.png" width="100%" height="auto"  data-srcset="images/appblox0.png 650w, images/appblox0.png 960w" data-sizes="100vw">
+                (Press the left or right arrows to change photos)
+              </div>
+              <div>  
+                <br><br>
                 Sample diagram of a sample app one can make
                 <img data-lazy="images/appblox5.png" width="100%" height="auto" data-srcset="images/appblox5.png 650w, images/appblox5.png 960w" data-sizes="100vw">
-                (Press the left or right arrows to change photos)
+                
               </div>
               <div>
                 <br><br>
@@ -851,12 +904,7 @@
                 <img data-lazy="images/appblox4.png" width="100%" height="auto"  data-srcset="images/appblox4.png 650w, images/appblox4.png 960w" data-sizes="100vw">
 
               </div>
-              <div>
-                <br><br>
-                Another sample generated web app
-                <img data-lazy="images/appblox0.png" width="100%" height="auto"  data-srcset="images/appblox0.png 650w, images/appblox0.png 960w" data-sizes="100vw">
-
-              </div>
+              
 
             </div>
 
